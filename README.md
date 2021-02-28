@@ -2,7 +2,7 @@
 
 <!--[![NuGet version](https://badge.fury.io/nu/DotNetify.Pulse.svg)](https://badge.fury.io/nu/DotNetify.Pulse)-->
 
-## DotNetify.LoadTester.Profiles
+## LoadTester Profiles
 
 Extension to __DotNetify-LoadTester__ that provides the following load test profiles:
 
