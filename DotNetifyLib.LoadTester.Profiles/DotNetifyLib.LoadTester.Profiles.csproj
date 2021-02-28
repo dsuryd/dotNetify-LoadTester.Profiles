@@ -1,0 +1,37 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <AssemblyName>DotNetify.LoadTester.Profiles</AssemblyName>
+    <RootNamespace>DotNetify.LoadTester.Profiles</RootNamespace>
+    <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
+    <Version>1.0.0-DEV1</Version>
+    <Authors>Dicky Suryadi</Authors>
+    <Company />
+    <Description>Workload profiles for running perfomance testing on dotNetify SignalR hub servers.</Description>
+    <Copyright>Copyright 2021</Copyright>
+    <PackageProjectUrl>https://dotnetify.net/core/dotnetify-loadtester</PackageProjectUrl>
+    <PackageIcon>dotnetify.png</PackageIcon>
+    <PackageLicenseFile>LICENSE.md</PackageLicenseFile>
+    <RepositoryUrl>https://github.com/dsuryd/dotNetify-LoadTester.Profiles</RepositoryUrl>
+    <PackageTags>dotnetify signalr</PackageTags>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="DotNetify.SignalR" Version="4.1.1" />
+    <PackageReference Include="DotNetify.LoadTester" Version="1.0.0-DEV3" />
+    <PackageReference Include="CommandLineParser" Version="2.8.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="..\dotnetify.png">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+    <None Include="..\LICENSE.md">
+      <Pack>True</Pack>
+      <PackagePath></PackagePath>
+    </None>
+  </ItemGroup>
+
+</Project>
