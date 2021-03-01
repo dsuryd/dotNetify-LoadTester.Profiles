@@ -45,7 +45,7 @@ app.UseDotNetify(config =>
 });
 ```
 
-#### Workload Profiles
+### Workload Profiles
 
 ##### Echo
 
