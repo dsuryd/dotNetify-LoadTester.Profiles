@@ -5,39 +5,11 @@
 
 ## DotNetify.LoadTester.Profiles
 
-**LoadTester** comes with an open source library extension that provides view models and tests for typical application profiles.
+This extension to **DotNetify.LoadTester** comes with view models to test common workloads in dotNetify applications and a CLI-based test runner.
 
-#### Profile Types
+### Installation
 
-##### Echo
-
-Continuous back and forth communication between the client and the server. The server sends a message to the client and waits for the response before sending the next message. Each client is served by its own view model instance.
-
-The message payload contains sequence number and timestamp to allow the test to detect for undelivered messages and measure the average message latency.
-
-##### Shared Echo
-
-This profile is similar to **Echo**, but all clients sharing the same view model instance. The view model uses the connection ID from `IConnectionContext` to differentiate the clients.
-
-##### Broadcast
-
-The server pushes updates to all clients at regular intervals. A single multicast view model instance is used.
-
-The message payload contains sequence number and timestamp to allow the test to detect for undelivered messages and measure the average interval between updates.
-
-##### ChatRoom
-
-This profile models chat rooms where clients are sending and receiving messages with each other and within groups. The clients within a group are configured into 3 types:
-
-- Chatty posters (10%): send message every 11 seconds.
-- Casual posters (20%): send message every 59 seconds.
-- Lurkers (70%): only receive messages.
-
-The message payload contains sequence number and timestamp to allow the test to detect for undelivered messages and measure the average message latency.
-
-#### Test Runner
-
-The NuGet library provides a convenient way to run the load test on any the above profiles. Start by creating a .NET Core console project, then add the NuGet library \*DotNetify.LoadTester.Profiles\*. In the `Main` method, pass the arguments to **LoadTestRunner.RunAsync**:
+Start by creating a .NET Core console project, then add the NuGet library \*DotNetify.LoadTester.Profiles\*. In the `Main` method, pass the arguments to **LoadTestRunner.RunAsync**:
 
 ```csharp
 using DotNetify.LoadTester;
@@ -73,3 +45,32 @@ app.UseDotNetify(config =>
 });
 ```
 
+#### Workload Profiles
+
+##### Echo
+
+Continuous back and forth communication between the client and the server. The server sends a message to the client and waits for the response before sending the next message. Each client is served by its own view model instance.
+
+The message payload contains sequence number and timestamp to allow the test to detect for undelivered messages and measure the average message latency.
+
+##### Shared Echo
+
+This profile is similar to **Echo**, but all clients sharing the same view model instance. The view model uses the connection ID from `IConnectionContext` to differentiate the clients.
+
+##### Broadcast
+
+The server pushes updates to all clients at regular intervals. A single multicast view model instance is used.
+
+The message payload contains sequence number and timestamp to allow the test to detect for undelivered messages and measure the average interval between updates.
+
+##### Chat Room
+
+This profile models chat rooms where clients are sending and receiving messages with each other and within groups. The clients within a group are configured into 3 types:
+
+- Chatty posters (10%): send message every 11 seconds.
+- Casual posters (20%): send message every 59 seconds.
+- Lurkers (70%): only receive messages.
+
+The message payload contains sequence number and timestamp to allow the test to detect for undelivered messages and measure the average message latency.
+
+ 
