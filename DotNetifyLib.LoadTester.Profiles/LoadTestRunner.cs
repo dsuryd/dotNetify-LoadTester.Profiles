@@ -34,8 +34,8 @@ namespace DotNetify.LoadTester
          [Option('p', "profile", Required = false, HelpText = "Test profile [echo, sharedecho, broadcast, chatroom] (default: echo)")]
          public string Profile { get; set; } = "echo";
 
-         [Option('c', "client", Required = false, HelpText = "Number of clients (default: 20).")]
-         public uint Clients { get; set; } = 20;
+         [Option('c', "client", Required = false, HelpText = "Number of clients (default: 5).")]
+         public uint Clients { get; set; } = 5;
 
          [Option('r', "run", Required = false, HelpText = "Run duration in seconds (default: 60).")]
          public uint RunDuration { get; set; } = 60;
@@ -61,7 +61,7 @@ namespace DotNetify.LoadTester
          if (settings.Servers == null)
             return;
 
-         settings.Servers = settings.Servers.Select(x => int.TryParse(x, out int _) ? $"https://localhost:{x}" : x);
+         settings.Servers = settings.Servers.Select(x => int.TryParse(x, out int num) ? (num % 2 == 0 ? "http" : "https") + $"://localhost:{x}" : x);
 
          try
          {
