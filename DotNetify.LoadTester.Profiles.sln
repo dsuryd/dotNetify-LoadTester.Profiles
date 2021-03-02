@@ -5,6 +5,10 @@ VisualStudioVersion = 16.0.31005.135
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "DotNetifyLib.LoadTester.Profiles", "DotNetifyLib.LoadTester.Profiles\DotNetifyLib.LoadTester.Profiles.csproj", "{7620E48D-0FDE-4CC4-B0DC-7055DD3820D5}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestAppServer", "TestAppServer\TestAppServer.csproj", "{62622C20-0B17-46E6-9B32-C46EC3E9A02E}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TestRunner", "TestRunner\TestRunner.csproj", "{66DFE75D-44E0-442D-89E9-F96D1FD5D6BF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{7620E48D-0FDE-4CC4-B0DC-7055DD3820D5}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7620E48D-0FDE-4CC4-B0DC-7055DD3820D5}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7620E48D-0FDE-4CC4-B0DC-7055DD3820D5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{62622C20-0B17-46E6-9B32-C46EC3E9A02E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{62622C20-0B17-46E6-9B32-C46EC3E9A02E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{62622C20-0B17-46E6-9B32-C46EC3E9A02E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{62622C20-0B17-46E6-9B32-C46EC3E9A02E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{66DFE75D-44E0-442D-89E9-F96D1FD5D6BF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{66DFE75D-44E0-442D-89E9-F96D1FD5D6BF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{66DFE75D-44E0-442D-89E9-F96D1FD5D6BF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{66DFE75D-44E0-442D-89E9-F96D1FD5D6BF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
