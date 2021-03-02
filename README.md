@@ -5,47 +5,25 @@
 
 ## DotNetify.LoadTester.Profiles
 
-This extension to **DotNetify.LoadTester** comes with view models to test common workloads in dotNetify applications and a CLI-based test runner.
+This extension to [**DotNetify.LoadTester**](https://dotnetify.net/core/loadtester) provides a tool for [dotNetify sponsors](https://github.com/sponsors/dsuryd) to perform load  test on a dotNetify application server under common types of workloads.  If you are not a sponsor, you can still run this tool, but the number of clients will be limited to 5.
 
-### Installation
+### How To Run
 
-Start by creating a .NET Core console project, then add the NuGet library \*DotNetify.LoadTester.Profiles\*. In the `Main` method, pass the arguments to **LoadTestRunner.RunAsync**:
+Run the TestAppServer project on the server machine, then run the TestRunner project from a command line on the client machine.  
 
-```csharp
-using DotNetify.LoadTester;
-...
-
-private async static Task Main(string[] args)
-{
-    var loggerFactory = LoggerFactory.Create(configure => configure.AddConsole());
-    await LoadTestRunner.RunAsync(args, loggerFactory);
-}
-```
-
-Run the project from the command prompt with the following arguments:
-
+The test runner supports the following options:
 ```
  -s, --server      Required. Hub server URL(s).
  -p, --profile     Test profile [echo, sharedecho, broadcast, chatroom] (default: echo)
- -c, --client      Number of clients (default: 20).
+ -c, --client      Number of clients (default: 5).
  -d, --rampdown    Ramp down period in seconds (default: 10).
  -i, --interval    Message interval in milliseconds (default: 1000).
  -g, --group       Number of multicast groups (default: 1).
 ```
 
-You will need to point it to a dotNetify application server. Assuming you already have one, the last step is to add the same NuGet library to the project and register the profile view models:
+You can enable detailed logging by setting the log level in `appsettings.json` to `Trace`.
 
-```csharp
-using DotNetify.LoadTester;
-...
-
-app.UseDotNetify(config =>
-{
-  config.RegisterLoadProfiles();
-});
-```
-
-### Workload Profiles
+### Test Profiles
 
 ##### Echo
 
