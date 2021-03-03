@@ -5,7 +5,7 @@
     <AssemblyName>DotNetify.LoadTester.Profiles</AssemblyName>
     <RootNamespace>DotNetify.LoadTester.Profiles</RootNamespace>
     <GeneratePackageOnBuild>true</GeneratePackageOnBuild>
-    <Version>1.0.0</Version>
+    <Version>1.0.1</Version>
     <Authors>Dicky Suryadi</Authors>
     <Company />
     <Description>Workload profiles for running perfomance testing on dotNetify SignalR hub servers.</Description>
@@ -19,7 +19,7 @@
 
   <ItemGroup>
     <PackageReference Include="DotNetify.SignalR" Version="4.1.1" />
-    <PackageReference Include="DotNetify.LoadTester" Version="1.0.0" />
+    <PackageReference Include="DotNetify.LoadTester" Version="1.0.1" />
     <PackageReference Include="CommandLineParser" Version="2.8.0" />
   </ItemGroup>
 
