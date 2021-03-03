@@ -18,7 +18,7 @@ The test runner supports the following options:
  -c, --client      Number of clients (default: 5).
  -d, --rampdown    Ramp down period in seconds (default: 10).
  -i, --interval    Message interval in milliseconds (default: 1000).
- -g, --group       Number of multicast groups (default: 1).
+ -g, --group       Number of multicast groups for chatroom (default: 1).
 ```
 
 You can enable detailed logging by setting the log level in `appsettings.json` to `Trace`.
