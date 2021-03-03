@@ -5,7 +5,7 @@
 
 ## DotNetify.LoadTester.Profiles
 
-This extension to [**DotNetify.LoadTester**](https://dotnetify.net/core/loadtester) provides a tool for [dotNetify sponsors](https://github.com/sponsors/dsuryd) to perform load  test on a dotNetify application server under common types of workloads.  If you are not a sponsor, you can still run this tool, but the number of clients will be limited to 5.
+This extension to [**DotNetify.LoadTester**](https://dotnetify.net/core/dotnetify-loadtester) provides a tool for [dotNetify sponsors](https://github.com/sponsors/dsuryd) to perform load  test on a dotNetify application server under common types of workloads.  If you are not a sponsor, you can still run this tool, but the number of clients will be limited to 5.
 
 ### How To Run
 
