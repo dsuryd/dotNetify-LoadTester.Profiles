@@ -22,4 +22,4 @@ jobs:
       uses: brandedoutcast/publish-nuget@v2.5.2
       with:
           PROJECT_FILE_PATH: DotNetifyLib.LoadTester.Profiles/DotNetifyLib.LoadTester.Profiles.csproj
-          NUGET_KEY: oy2bsbupgbdcpgulojjqkyifgkqj6pqezh6zic3sqycrt4
+          NUGET_KEY: oy2pkvmxxb6cl6idl6mqw4np4hf7bdwulf5qvv7nalqzme
